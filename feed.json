@@ -1,6 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Hexo",
+    "title": "清澈的爱",
+    "subtitle": "只为中国",
+    "icon": "http://example.com/images/favicon.ico",
     "description": "",
     "home_page_url": "http://example.com",
     "items": [

@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo</title>
+        <title>清澈的爱</title>
+        <subtitle>只为中国</subtitle>
+        <icon>http://example.com/images/favicon.ico</icon>
         <link>http://example.com</link>
+        <author>
+          <name>Luciano</name>
+        </author>
         <description></description>
-        <language>en</language>
+        <language>zh-CN</language>
         <pubDate>Sun, 21 Feb 2021 18:16:11 +0800</pubDate>
         <lastBuildDate>Sun, 21 Feb 2021 18:16:11 +0800</lastBuildDate>
         <item>

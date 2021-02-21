@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://example.com</id>
-    <title>Hexo</title>
+    <title>清澈的爱</title>
+    <subtitle>只为中国</subtitle>
+    <icon>http://example.com/images/favicon.ico</icon>
     <link href="http://example.com" />
+    <author>
+      <name>Luciano</name>
+    </author>
     <updated>2021-02-21T10:16:11.257Z</updated>
     <entry>
         <id>http://example.com/2021/02/21/anaconda/</id>
