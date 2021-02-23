@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nixiu.xyz</id>
     <title>云烟成雨</title>
-    <subtitle>清澈的爱，只为中国</subtitle>
+    <subtitle>构建万物互联的智能世界</subtitle>
     <icon>https://nixiu.xyz/images/favicon.ico</icon>
     <link href="https://nixiu.xyz" />
     <author>
-      <name>Luciano</name>
+      <name>胖头鱼</name>
     </author>
     <updated>2021-02-21T10:16:11.257Z</updated>
     <entry>
