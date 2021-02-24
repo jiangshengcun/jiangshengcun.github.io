@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>云烟成雨</title>
+        <title>Dolphin Bay&#39;s Blog</title>
         <subtitle>构建万物互联的智能世界</subtitle>
         <icon>https://nixiu.xyz/images/favicon.ico</icon>
         <link>https://nixiu.xyz</link>
         <author>
-          <name>胖头鱼</name>
+          <name>Merlion</name>
         </author>
-        <description>变得更强</description>
+        <description>小学二年级</description>
         <language>zh-CN</language>
         <pubDate>Sun, 21 Feb 2021 18:16:11 +0800</pubDate>
         <lastBuildDate>Sun, 21 Feb 2021 18:16:11 +0800</lastBuildDate>
