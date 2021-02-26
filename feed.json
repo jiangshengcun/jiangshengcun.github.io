@@ -5,5 +5,16 @@
     "icon": "https://nixiu.xyz/images/favicon.ico",
     "description": "小学二年级",
     "home_page_url": "https://nixiu.xyz",
-    "items": []
+    "items": [
+        {
+            "id": "https://nixiu.xyz/2021/02/26/linux-proxy/",
+            "url": "https://nixiu.xyz/2021/02/26/linux-proxy/",
+            "title": "在Linux终端中设置代理的方法",
+            "date_published": "2021-02-26T09:41:15.000Z",
+            "content_html": "<ol>\n<li>临时设置（关闭终端后失效）</li>\n</ol>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">https_proxy</span><span class=\"token operator\">=</span>http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">http_proxy</span><span class=\"token operator\">=</span>http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"3\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">ALL_PROXY</span><span class=\"token operator\">=</span>socks5://127.0.0.1:7891</pre></td></tr></table></figure><ol start=\"2\">\n<li>对当前用户生效</li>\n</ol>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">cat</span> <span class=\"token operator\">>></span> ~/.bashrc <span class=\"token operator\">&lt;&lt;</span><span class=\"token string\">EOF</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>export https_proxy=http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>export http_proxy=http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"4\"></td><td><pre>export ALL_PROXY=socks5://127.0.0.1:7891</pre></td></tr><tr><td data-num=\"5\"></td><td><pre>EOF</span></pre></td></tr><tr><td data-num=\"6\"></td><td><pre><span class=\"token builtin class-name\">source</span> ~/.bashrc</pre></td></tr></table></figure><ol start=\"3\">\n<li>对所有用户生效（运行 <code>sudo -i</code>  切换到 root 用户）</li>\n</ol>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">cat</span> <span class=\"token operator\">>></span> /etc/profile <span class=\"token operator\">&lt;&lt;</span><span class=\"token string\">EOF</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>export https_proxy=http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"3\"></td><td><pre>export http_proxy=http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"4\"></td><td><pre>export ALL_PROXY=socks5://127.0.0.1:7891</pre></td></tr><tr><td data-num=\"5\"></td><td><pre>EOF</span></pre></td></tr><tr><td data-num=\"6\"></td><td><pre><span class=\"token builtin class-name\">source</span> /etc/profile</pre></td></tr></table></figure><ul>\n<li>终端测试命令（输出 HTTP/1.1 200 OK 即成功）</li>\n</ul>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">curl</span> -I www.google.com</pre></td></tr></table></figure><p><img data-src=\"linux-proxy/image-20210226204109235.png\" alt=\"image-20210226204109235\" /></p>\n",
+            "tags": [
+                "Linux"
+            ]
+        }
+    ]
 }
