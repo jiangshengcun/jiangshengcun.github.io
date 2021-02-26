@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nixiu.xyz</id>
-    <title>Dolphin Bay&#39;s Blog</title>
+    <title>不吃花椒的咸鱼酱</title>
     <subtitle>构建万物互联的智能世界</subtitle>
     <icon>https://nixiu.xyz/images/favicon.ico</icon>
     <link href="https://nixiu.xyz" />
     <author>
-      <name>Merlion</name>
+      <name>咸鱼酱</name>
     </author>
     <updated>2021-02-21T10:16:11.257Z</updated>
     <entry>
