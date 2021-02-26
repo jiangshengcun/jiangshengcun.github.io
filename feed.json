@@ -7,6 +7,14 @@
     "home_page_url": "https://nixiu.xyz",
     "items": [
         {
+            "id": "https://nixiu.xyz/2021/02/26/linux-proxy/",
+            "url": "https://nixiu.xyz/2021/02/26/linux-proxy/",
+            "title": "linux_proxy",
+            "date_published": "2021-02-26T06:42:01.000Z",
+            "content_html": "<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">http_proxy</span><span class=\"token operator\">=</span>http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">https_proxy</span><span class=\"token operator\">=</span>http://127.0.0.1:7890</pre></td></tr><tr><td data-num=\"3\"></td><td><pre><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">all_proxy</span><span class=\"token operator\">=</span>socks5://127.0.0.1:7891</pre></td></tr></table></figure>",
+            "tags": []
+        },
+        {
             "id": "https://nixiu.xyz/2021/02/21/anaconda/",
             "url": "https://nixiu.xyz/2021/02/21/anaconda/",
             "title": "",

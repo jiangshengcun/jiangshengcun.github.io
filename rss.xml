@@ -10,8 +10,15 @@
         </author>
         <description>小学二年级</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 21 Feb 2021 18:16:11 +0800</pubDate>
-        <lastBuildDate>Sun, 21 Feb 2021 18:16:11 +0800</lastBuildDate>
+        <pubDate>Fri, 26 Feb 2021 14:42:01 +0800</pubDate>
+        <lastBuildDate>Fri, 26 Feb 2021 14:42:01 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://nixiu.xyz/2021/02/26/linux-proxy/</guid>
+            <title>linux_proxy</title>
+            <link>https://nixiu.xyz/2021/02/26/linux-proxy/</link>
+            <pubDate>Fri, 26 Feb 2021 14:42:01 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;all_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;socks5://127.0.0.1:7891&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://nixiu.xyz/2021/02/21/anaconda/</guid>
             <title></title>

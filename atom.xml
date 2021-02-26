@@ -8,7 +8,14 @@
     <author>
       <name>咸鱼酱</name>
     </author>
-    <updated>2021-02-21T10:16:11.257Z</updated>
+    <updated>2021-02-26T06:42:01.000Z</updated>
+    <entry>
+        <id>https://nixiu.xyz/2021/02/26/linux-proxy/</id>
+        <title>linux_proxy</title>
+        <link rel="alternate" href="https://nixiu.xyz/2021/02/26/linux-proxy/"/>
+        <content type="html">&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;https_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;http://127.0.0.1:7890&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;all_proxy&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;socks5://127.0.0.1:7891&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <updated>2021-02-26T06:42:01.000Z</updated>
+    </entry>
     <entry>
         <id>https://nixiu.xyz/2021/02/21/anaconda/</id>
         <title></title>
