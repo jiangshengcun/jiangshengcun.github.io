@@ -8,7 +8,84 @@
     <author>
       <name>咸鱼酱</name>
     </author>
-    <updated>2021-02-26T09:41:15.000Z</updated>
+    <updated>2021-03-02T14:22:49.000Z</updated>
+    <entry>
+        <id>https://nixiu.xyz/2021/03/02/mirrors/</id>
+        <title>Ubuntu、CentOS配置国内软件源</title>
+        <link rel="alternate" href="https://nixiu.xyz/2021/03/02/mirrors/"/>
+        <content type="html">&lt;h2 id=&#34;ubuntu源使用帮助&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ubuntu源使用帮助&#34;&gt;#&lt;/a&gt; Ubuntu 源使用帮助&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;备份原软件源的配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; -a /etc/apt/sources.list /etc/apt/sources.list.bak&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;修改 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;  文件中官方源地址为其他镜像源地址（任选其一即可）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里镜像源&lt;/li&gt;
+&lt;li&gt;阿里云 ECS 实例用户请替换为内网地址 &lt;code&gt;http://mirrors.cloud.aliyuncs.com&lt;/code&gt;  以节省流量费用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*archive.ubuntu.com@https://mirrors.aliyun.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*security.ubuntu.com@https://mirrors.aliyun.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;清华镜像源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;华为镜像源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*archive.ubuntu.com@https://repo.huaweicloud.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*security.ubuntu.com@https://repo.huaweicloud.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;腾讯镜像源&lt;/li&gt;
+&lt;li&gt;腾讯云 CVM 付费用户请替换为内网地址 &lt;code&gt;http://mirrors.tencentyun.com&lt;/code&gt;  以节省流量费用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*archive.ubuntu.com@https://mirrors.cloud.tencent.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -i &lt;span class=&#34;token string&#34;&gt;&#34;s@http://.*security.ubuntu.com@https://mirrors.cloud.tencent.com@g&#34;&lt;/span&gt; /etc/apt/sources.list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;更新索引&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; clean&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; update&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;centos源使用帮助&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#centos源使用帮助&#34;&gt;#&lt;/a&gt; CentOS 源使用帮助&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;备份原软件源的配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; -a /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;两种方案选择（方案一以阿里源为例，方案二可自选软件源）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;方案一：下载相应 CentOS 版本的软件源文件 &lt;code&gt;CentOS-Base.repo&lt;/code&gt;  到 &lt;code&gt;/etc/yum.repos.d&lt;/code&gt;  目录下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CentOS 8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;wget&lt;/span&gt; -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-8.repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-8.repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;CentOS 7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;wget&lt;/span&gt; -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;或者&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;方案二：修改 &lt;code&gt;CentOS-Base.repo&lt;/code&gt;  文件，取消 &lt;code&gt;baseurl&lt;/code&gt;  开头的行的注释，并增加 &lt;code&gt;mirrorlist&lt;/code&gt;  开头的行的注释&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;把第 2 行内的海外官方镜像源地址替换为国内软件源地址任选如下其一即可默认公网阿里镜像源&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;清华公网地址 &lt;code&gt;https://mirrors.tuna.tsinghua.edu.cn&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;华为公网地址 &lt;code&gt;https://repo.huaweicloud.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;腾讯公网地址 &lt;code&gt;https://mirrors.cloud.tencent.com&lt;/code&gt;  或者 &lt;code&gt;https://mirrors.tencent.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;腾讯内网地址 &lt;code&gt;http://mirrors.tencentyun.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;阿里内网地址 &lt;code&gt;http://mirrors.cloud.aliyuncs.com&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sed&lt;/span&gt; -e &lt;span class=&#34;token string&#34;&gt;&#39;s|^mirrorlist=|#mirrorlist=|g&#39;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         -e &lt;span class=&#34;token string&#34;&gt;&#39;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.aliyun.com|g&#39;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         -i.bak &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         /etc/yum.repos.d/CentOS-*.repo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;更新缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; yum clean all&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; yum makecache&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;国内开源镜像站汇总&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#国内开源镜像站汇总&#34;&gt;#&lt;/a&gt; 国内开源镜像站汇总&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIuYWxpeXVuLmNvbS9taXJyb3Iv&#34;&gt;阿里巴巴开源镜像站 - OPSX 镜像站 - 阿里云开发者社区&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnR1bmEudHNpbmdodWEuZWR1LmNuLw==&#34;&gt;清华大学开源软件镜像站 | Tsinghua Open Source Mirror&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLmh1YXdlaWNsb3VkLmNvbS8=&#34;&gt;华为开源镜像站_软件开发服务_华为云&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLmNsb3VkLnRlbmNlbnQuY29tLw==&#34;&gt;腾讯软件源&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnVzdGMuZWR1LmNuLw==&#34;&gt;USTC Open Source Software Mirror&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLjE2My5jb20v&#34;&gt;欢迎访问网易开源镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLmhpdC5lZHUuY24v&#34;&gt;哈尔滨工业大学开源镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLm5qdS5lZHUuY24v&#34;&gt;南京大学开源镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLm5qdXB0LmVkdS5jbi8=&#34;&gt;南京邮电大学开源软件镜像站 | Njupt Open Source Mirror&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLmNxdS5lZHUuY24v&#34;&gt;重庆大学开源软件镜像站 | Chongqing University Open Source Mirror Site&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLmRndXQuZWR1LmNuLw==&#34;&gt;DGUT Open Source Software Mirrors&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3IubHp1LmVkdS5jbi8=&#34;&gt;兰州大学开源社区镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3IuYmp0dS5lZHUuY24v&#34;&gt;北京交通大学自由与开源软件镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mdHAuc2p0dS5lZHUuY24v&#34;&gt;上海交通大学开源镜像站&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnNvaHUuY29tLw==&#34;&gt;搜狐软件源&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnl1bi1pZGMuY29tLw==&#34;&gt;云 IDC&lt;/span&gt;&lt;/p&gt;
+&lt;h6 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h6&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9taXJyb3JzLnVzdGMuZWR1LmNuL2hlbHAvdWJ1bnR1Lmh0bWw=&#34;&gt;Ubuntu 源使用帮助&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="Linux,Mirrors" scheme="https://nixiu.xyz/tags/Linux-Mirrors/" />
+        <updated>2021-03-02T14:22:49.000Z</updated>
+    </entry>
     <entry>
         <id>https://nixiu.xyz/2021/02/26/linux-proxy/</id>
         <title>在Linux终端中设置代理的方法</title>
